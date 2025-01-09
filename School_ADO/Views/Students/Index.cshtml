@@ -1,0 +1,44 @@
+﻿@model IEnumerable<School_ADO.Models.Entity.Student>
+
+@{
+    ViewBag.Title = "Students Management";
+}
+
+<div class="container">
+    <header>
+        <h1>Students Management</h1>
+    </header>
+    <main>
+        <div class="actions">
+            <a href="@Url.Action("Create", "Students")" class="btn add-btn">Add New Student</a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Date of Birth</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.StudentID</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.DateOfBirth.ToString("yyyy-MM-dd")</td>
+                        <td>@item.Grade</td>
+                        <td>
+                            <a href="@Url.Action("Edit", "Students", new { id = item.StudentID })" class="btn edit-btn">Edit</a>
+                            <a href="@Url.Action("Delete", "Students", new { id = item.StudentID })" class="btn delete-btn">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+</div>

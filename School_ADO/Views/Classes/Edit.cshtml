@@ -1,0 +1,30 @@
+﻿@model School_ADO.Models.Entity.Class
+
+@{
+    ViewBag.Title = "Edit Class";
+}
+
+<div class="container">
+    <header>
+        <h1>Edit Class</h1>
+    </header>
+    <main>
+        @using (Html.BeginForm())
+        {
+            @Html.HiddenFor(m => m.ClassID)
+            <div class="form-group">
+                <label>Class Name</label>
+                @Html.TextBoxFor(m => m.ClassName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Teacher ID</label>
+                @Html.TextBoxFor(m => m.TeacherID, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Student ID</label>
+                @Html.TextBoxFor(m => m.StudentID, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn edit-btn">Save Changes</button>
+        }
+    </main>
+</div>

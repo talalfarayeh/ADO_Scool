@@ -1,0 +1,29 @@
+﻿@model School_ADO.Models.Entity.Teacher
+
+@{
+    ViewBag.Title = "Add New Teacher";
+}
+
+<div class="container">
+    <header>
+        <h1>Add New Teacher</h1>
+    </header>
+    <main>
+        @using (Html.BeginForm())
+        {
+            <div class="form-group">
+                <label>First Name</label>
+                @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+            </div>
+            <button type="submit" class="btn add-btn">Save</button>
+        }
+    </main>
+</div>

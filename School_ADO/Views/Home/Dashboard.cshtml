@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="container">
+    <header>
+        <h1>School Management Dashboard</h1>
+    </header>
+    <main class="dashboard">
+      
+        <section class="card">
+            <h2>Students</h2>
+             <a href="@Url.Action("Index", "Students")" class="btn view-btn">View Students</a>
+        </section>
+
+        
+        <section class="card">
+            <h2>Teachers</h2>
+             <a href="@Url.Action("Index", "Teachers")" class="btn view-btn">View Teachers</a>
+        </section>
+
+        
+        <section class="card">
+            <h2>Classes</h2>
+             <a href="@Url.Action("Index", "Classes")" class="btn view-btn">View Classes</a>
+        </section>
+    </main>
+</div>

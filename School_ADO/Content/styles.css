@@ -1,0 +1,106 @@
+﻿/* القواعد العامة */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* العنوان */
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* الجدول */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .table th, .table td {
+        text-align: left;
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+
+    .table th {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+/* الأزرار */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn {
+    background-color: #28a745;
+}
+
+    .add-btn:hover {
+        background-color: #218838;
+    }
+
+.edit-btn {
+    background-color: #ffc107;
+}
+
+    .edit-btn:hover {
+        background-color: #e0a800;
+    }
+
+.delete-btn {
+    background-color: #dc3545;
+}
+
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
+
+.cancel-btn {
+    background-color: #6c757d;
+}
+
+    .cancel-btn:hover {
+        background-color: #5a6268;
+    }
+
+/* نمط النماذج */
+.form-group {
+    margin-bottom: 15px;
+}
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
